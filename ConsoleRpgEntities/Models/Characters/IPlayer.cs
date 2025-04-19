@@ -1,5 +1,6 @@
 ﻿using ConsoleRpgEntities.Models.Abilities.PlayerAbilities;
 using ConsoleRpgEntities.Models.Attributes;
+using ConsoleRpgEntities.Models.Equipment;
 
 namespace ConsoleRpgEntities.Models.Characters;
 
@@ -9,6 +10,8 @@ public interface IPlayer
     string Name { get; set; }
 
     IEnumerable<Ability> Abilities { get; set; }
+    IEnumerable<Item> Inventory { get; set; }
+
 
     void Attack(ITargetable target);
     void UseAbility(IAbility ability, ITargetable target);

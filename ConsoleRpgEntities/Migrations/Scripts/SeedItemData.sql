@@ -1,0 +1,6 @@
+﻿SET IDENTITY_INSERT [dbo].[Items] ON
+INSERT INTO [dbo].[Items] ([Id], [Name], [Value], [Description], [ItemType], [Defense], [ArmorType], [Durability], [Damage], [WeaponType]) VALUES (7, N'Breastplate of Valor', 100, N'Silver breastplate exuding an aura of heroism', N'Armor', 2, N'Silver', 200, NULL, NULL)
+INSERT INTO [dbo].[Items] ([Id], [Name], [Value], [Description], [ItemType], [Defense], [ArmorType], [Durability], [Damage], [WeaponType]) VALUES (9, N'Hero''s Bane', 200, N'Ruby-hilted longsword', N'Weapon', NULL, NULL, 150, 10, N'Longsword')
+INSERT INTO [dbo].[Items] ([Id], [Name], [Value], [Description], [ItemType], [Defense], [ArmorType], [Durability], [Damage], [WeaponType]) VALUES (10, N'Meat Hacker', 20, N'Crude axe with a hilt wrapped in leather', N'Weapon', NULL, NULL, 50, 6, N'Axe')
+INSERT INTO [dbo].[Items] ([Id], [Name], [Value], [Description], [ItemType], [Defense], [ArmorType], [Durability], [Damage], [WeaponType]) VALUES (11, N'Torn Tunic', 5, N'Tunic covered in tears', N'Armor', 0, N'Cloth', 5, NULL, NULL)
+SET IDENTITY_INSERT [dbo].[Items] OFF

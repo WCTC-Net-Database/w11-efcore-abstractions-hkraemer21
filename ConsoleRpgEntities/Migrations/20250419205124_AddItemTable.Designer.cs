@@ -3,6 +3,7 @@ using ConsoleRpgEntities.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ConsoleRpgEntities.Migrations
 {
     [DbContext(typeof(GameContext))]
-    partial class GameContextModelSnapshot : ModelSnapshot
+    [Migration("20250419205124_AddItemTable")]
+    partial class AddItemTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -127,9 +129,6 @@ namespace ConsoleRpgEntities.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Durability")
-                        .HasColumnType("int");
-
                     b.Property<string>("ItemType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -212,6 +211,9 @@ namespace ConsoleRpgEntities.Migrations
                     b.Property<int>("Defense")
                         .HasColumnType("int");
 
+                    b.Property<int>("Durability")
+                        .HasColumnType("int");
+
                     b.HasDiscriminator().HasValue("Armor");
                 });
 
@@ -221,6 +223,10 @@ namespace ConsoleRpgEntities.Migrations
 
                     b.Property<int>("Damage")
                         .HasColumnType("int");
+
+                    b.Property<int>("Durability")
+                        .HasColumnType("int")
+                        .HasColumnName("Weapon_Durability");
 
                     b.Property<string>("WeaponType")
                         .IsRequired()
